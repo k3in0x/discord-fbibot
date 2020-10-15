@@ -1,6 +1,10 @@
 const channelvoice = 'You must first enter the voice channel!';
 
 module.exports = {
+  name: 'juan',
+  category: 'juan',
+  description: 'The bot joins on the voice channel and says "ONICHAN" Hiper louded.',
+  usage: `juan`,
   run: async (client, message, args) => {
     if (message.member.voice.channel) {
       const connection = await message.member.voice.channel.join();
