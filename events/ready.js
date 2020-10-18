@@ -6,6 +6,7 @@ module.exports = client => {
             activity: {
                 name: 'fbi help',
                 type: 'LISTENING',
+                browser: `Discord iOS`,
             }
         });
 }
