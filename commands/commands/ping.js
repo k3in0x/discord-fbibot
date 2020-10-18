@@ -1,10 +1,8 @@
 const { MessageEmbed } = require('discord.js');
-const Client = require('../structures/Client');
-const {Message} = require('discord.js');
 
 module.exports = {
     name: 'ping',
-    category: 'commands',
+    category: 'ping',
     description: 'Returns bot and API latency in milliseconds.',
     usage: `ping`,
    /**
