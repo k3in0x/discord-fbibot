@@ -29,7 +29,7 @@ module.exports = async (client, message) => {
     if (!message.guild) return;
 
     if(message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) {
-        return message.channel.send("This works.");
+        return message.channel.react('✅');
     };
 
 
