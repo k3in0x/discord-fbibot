@@ -29,5 +29,23 @@ fs.readdir('./events/', (err, files) => {
     });
 });
 
+// KEEP ALIVE REPL.IT
+const keepAlive = require('./events/config');
+const Monitor = require('ping-monitor');
+ 
+keepAlive();
+const monitor = new Monitor({
+    website: 'LINK',
+    title: 'Nombre',
+    interval: 30 // minutes
+});
+ 
+monitor.on('up', (res) => console.log(`${res.website} está encedido.`));
+monitor.on('down', (res) => console.log(`${res.website} se ha caído - ${res.statusMessage}`));
+monitor.on('stop', (website) => console.log(`${website} se ha parado.`) );
+monitor.on('error', (error) => console.log(error));
+
+// END KEEP ALIVE
+
 client.mongoose.init();
 client.login(process.env.TOKEN);

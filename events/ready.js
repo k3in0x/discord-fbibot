@@ -1,6 +1,6 @@
 module.exports = client => {
-    console.log('Let\'s get this bread!');
-    
+    console.log('Lets get this bread!');
+
         client.user.setPresence({
             status: 'online',
             activity: {
